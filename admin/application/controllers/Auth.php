@@ -10,7 +10,7 @@ class Auth extends MY_Controller {
 		if( $this->input->post("enviar") !== FALSE ){
 			$this->load->model("Usuarios_model");
 			if( $usuario = $this->Usuarios_model->getUsuario($this->input->post("usuario")) ){
-				echo$usuario->senha; exit;
+				
 				if( $this->encryption->decrypt($usuario->senha) == $this->input->post("senha", TRUE) ){
 
 					$usuario->perfis = $this->Usuarios_model->getPerfisId($usuario->id);

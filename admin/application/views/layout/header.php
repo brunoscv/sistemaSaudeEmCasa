@@ -22,7 +22,7 @@
     <link href="<?php echo base_url(); ?>assets/plugins/slidepushmenus/css/component.css" rel="stylesheet" type="text/css"/>
     <!-- <link href="<?php echo base_url(); ?>assets/plugins/datatables/css/jquery.datatables.min.css" rel="stylesheet" type="text/css"/>	
     <link href="<?php echo base_url(); ?>assets/plugins/datatables/css/jquery.datatables_themeroller.css" rel="stylesheet" type="text/css"/>	 -->
-    <link href="<?php echo base_url(); ?>assets/plugins/datatables/css/datatable.css" rel="stylesheet" type="text/css"/>
+    <!--<link href="<?php echo base_url(); ?>assets/plugins/datatables/css/datatable.css" rel="stylesheet" type="text/css"/> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">  
     
     <link href="<?php echo base_url(); ?>assets/plugins/x-editable/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet" type="text/css">
