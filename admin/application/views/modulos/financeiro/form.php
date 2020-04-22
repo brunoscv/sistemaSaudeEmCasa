@@ -21,7 +21,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="data_nota">Data da Nota</label>
 								<div class="col-sm-10">
-									<input name="data_nota" type="text" id="data_nota" class="form-control" value="<?php echo set_value("data_nota", date("d/m/Y", strtotime(@$item->data_nota))) ?>" />
+									<input name="data_nota" type="text" id="data_nota" class="form-control" value="<?php @$item->data_nota ? set_value("data_nota", date("d/m/Y", strtotime(@$item->data_nota))) : set_value("data_nota", date("d/m/Y")) ?>" />
 								<?php echo form_error('data_nota'); ?>
 								</div>
 							</div>
@@ -35,7 +35,7 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="valor_nota">Valor da Nota</label>
 								<div class="col-sm-10">
-									<input name="valor_nota" type="number" id="valor_nota" class="form-control" value="<?php echo set_value("valor_nota", @$item->valor_nota) ?>" />
+									<input name="valor_nota" type="number" id="valor_nota" class="form-control" step="0.01" value="<?php echo set_value("valor_nota", formatar_moeda(@$item->valor_nota))?>" />
 								<?php echo form_error('valor_nota'); ?>
 								</div>
 							</div>
@@ -43,7 +43,7 @@
 						<div class="form-actions">
 							<div class="col-sm-10 col-offset-2">
 								<input type="submit" name="enviar" class="btn btn-primary" value="Salvar" />
-								<a href="<?php echo site_url("atendimentos"); ?>" class="btn">
+								<a href="<?php echo site_url("financeiro"); ?>" class="btn">
 									Cancelar
 								</a>
 							</div>
@@ -72,6 +72,6 @@
 			language: "pt",
 			todayHighlight: true
 		});
-		$("#data_fim").mask("99/99/9999");
+		$("#data_fim").mask("99/99/9999")
 	});
 </script>

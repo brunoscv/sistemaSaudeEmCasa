@@ -1,3 +1,8 @@
+<style type="text/css">
+.fa-archive::before {
+    
+}
+</style>
 <div id="main-wrapper" class="container" style="margin-top: 2em; height: 100vh;">
 	<div class="row" data-container="all">
         <div class="col-md-12">
@@ -50,7 +55,7 @@
 							<div class="col-sm-10">
 								<div class="input-group">
 									<input type="text" value="<?php echo set_value("icone", @$item->icone); ?>" class="form-control" name="icone" id="icone">
-									<div class="input-group-btn btn btn-primary"><i id="preview-icone" class="<?php echo set_value("icone", @$item->icone); ?>"></i></div>
+									<div class="input-group-btn btn btn-primary" style="border-radius: 0px 4px 4px 0px !important;color: white;font-size: 14px;"><i id="preview-icone" class="<?php echo set_value("icone", @$item->icone); ?>"></i></div>
 									<?php echo form_error('icone'); ?>
 								</div>
 							</div>

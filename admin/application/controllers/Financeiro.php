@@ -84,7 +84,7 @@ class Financeiro extends MY_Controller {
                     //$financeiro['id'] 			  = $this->input->post('id', TRUE);
                     $financeiro['profissional_id']  = $this->input->post('profissional_id', TRUE);
                     $financeiro['data_nota']        = formatar_data($this->input->post('data_nota', TRUE));
-                    $financeiro['valor_nota']       = $this->input->post('valor_nota', TRUE);
+                    $financeiro['valor_nota']       = formatar_moeda($this->input->post('valor_nota', TRUE));
                     $financeiro['qtd_atendimentos'] = $this->input->post('qtd_atendimentos', TRUE);
                     $financeiro['status'] 		    = 1;
                     $financeiro['createdAt'] 	    = date("Y-m-d");

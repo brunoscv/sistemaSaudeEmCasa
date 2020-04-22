@@ -42,7 +42,7 @@
 						<div class="form-actions">
 							<div class="col-sm-10 col-offset-2">
 								<input type="submit" name="enviar" class="btn btn-primary" value="Salvar" />
-								<a href="<?php echo site_url("atendimentos"); ?>" class="btn">
+								<a href="<?php echo site_url("consultas/atendimentos"); ?>" class="btn">
 									Cancelar
 								</a>
 							</div>

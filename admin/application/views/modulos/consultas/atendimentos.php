@@ -24,7 +24,7 @@
 									<th style="text-align:center">Renovar</th>
 									<th style="text-align:center">Status</th>
 									<th style="text-align:center">Criado</th>
-									<th class="td-actions"></th>
+									<!-- <th class="td-actions"></th> -->
 								</tr>
 							</thead>
 							<tbody>
@@ -43,7 +43,7 @@
 									<td class="text-center" style="text-align:center"><a class="btn btn-warning renovar_atendimentos" consultas_id="<?php echo $item->consultas_id;?>" atendimentos_id="<?php echo $item->id;?>"><i class="fa fa-repeat"></i></a></td>
 									<td style="text-align:center"><?php echo (($item->status == 1) ? '<span class="label label-success"> Ativo </span>' : (($item->status == 2) ? '<span class="label label-success"> Concluído </span>' : '<span class="label label-danger"> Inativo </span>')); ?></td>
 									<td style="text-align:center"><?php echo date("d/m/Y", strtotime($item->createdAt)); ?></td>
-									<td class="td-actions">
+									<!-- <td class="td-actions">
 										<button type="button" 
 												class="btn btn-default fa fa-ellipsis-v" 
 												id="myPopover" 
@@ -56,7 +56,7 @@
 																<p><i class='btn-icon-only fa fa-trash'></i></span> Excluir</p> "
 												data-placement="bottom">
 										</button>
-									</td>
+									</td> -->
 								</tr>
 								<?php endforeach; ?>
 							</tbody>
@@ -109,12 +109,12 @@
 								},
 								success: function(data) {
 									toastr.success("Ação Completada com Sucesso");
-									window.location.href = "/sistema/admin/consultas/sessoes/" + consultas_id + '/' + atendimentos_id;
+									window.location.href = "/sistemaSaudeEmCasa/admin/consultas/sessoes/" + consultas_id + '/' + atendimentos_id;
 									//window.location.href = "/saudecasa/admin/consultas/sessoes/" + consultas_id + '/' + atendimentos_id;
 								},
 								complete: function(data) {
 									toastr.success("Ação Completada com Sucesso");
-									window.location.href = "/sistema/admin/consultas/sessoes/" + consultas_id + '/' + atendimentos_id;
+									window.location.href = "/sistemaSaudeEmCasa/admin/consultas/sessoes/" + consultas_id + '/' + atendimentos_id;
 									//window.location.href = "/saudecasa/admin/consultas/sessoes/" + consultas_id + '/' + atendimentos_id;                                  
 									console.log(data);
 								}

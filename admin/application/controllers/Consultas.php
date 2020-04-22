@@ -57,7 +57,8 @@ class Consultas extends MY_Controller {
                             ->join("pacientes AS p", "c.pacientes_id = p.id")
 							->join("profissionais AS pr", "c.profissionais_id = pr.id")
 							->join("especialidades AS e", "pr.especialidades_id = e.id")
-                            ->limit($perPage,$offset)
+							->limit($perPage,$offset)
+							->order_by("c.id DESC")
                             ->get();
 
 		if( !is_null($this->input->get('filtro_field')) ){
